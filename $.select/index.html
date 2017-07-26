@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>select</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="index.css">
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="address.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<div class="content bgf" style="margin-bottom: 10px;">
+	<div class="w_box user_select" data-title="请选择" style="padding: 5px 0;">
+		<div class="flex_1">选择框</div>
+		<div class="pack_e box_cm">
+			<p class="flex_1 col_1">
+				<input type="hidden" name="education">
+				<span class="education">请选择</span>
+			</p>
+			<span class="icon_down icon_right"><i></i></span>
+		</div>
+		<ul>
+           <li>选择1</li>
+           <li class="selected">选择2</li>
+           <li>选择3</li>
+           <li>选择4</li>
+        </ul>
+	</div>
+</div>
+<div class="content bgf">
+	<div class="w_box">
+		<div class="flex_1 box_cm">现居地址</div>
+		<div class="flex_1">
+			<!-- data-p,data-c,data-a 默认省市区ID -->
+			<div class="w_box box_cm province" data-title="请选择省市区" data-p="5" data-c="48" data-a="597">
+				<p class="flex_1 pack_e">
+					<span id="provinceSpan">省-市-区</span>
+					<input class="provin" type="hidden" name="province"/>
+				</p>
+				<div class="provinces" style="display: none">
+	            </div>
+			</div>
+			<div class="w_box box_cm">
+				<div class="flex_1 none">现居详细地址</div>
+				<div class="flex_1 pack_e">
+					<input class="required" name="address_details" type="text" placeholder="请输入详细地址" value="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
