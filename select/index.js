@@ -7,7 +7,7 @@ $(function(){
     });
 });
 
-// 点击选择框
+// 点击选择弹出选择框
 var defaults = {
 	// type默认为0 单选，type: 1为选择省市区
 	type: 0,
