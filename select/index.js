@@ -5,7 +5,7 @@ $(function(){
 		var provinceSpan=$("#provinceSpan").text();
         $("input[name=province]").val(provinceSpan);
     });
-})
+});
 
 // 点击选择框
 var defaults = {
