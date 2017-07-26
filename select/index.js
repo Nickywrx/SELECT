@@ -7,41 +7,6 @@ $(function(){
     });
 })
 
-/*
-* 滑动手指，元素上下移动位置
-* object 移动的元素；
-* callback 回调函数;
-*/
-function moveElement(object,callback,callback1){
-	var that = this,
-	top,startY,
-	objNav = object.get(0);
-	function moveNav(event){
-        switch(event.type){
-        	case "touchstart":
-        	var touch = event.touches[0];
-        	startY = touch.pageY;//手指放入屏幕的初始位置
-            top = object.css("top");//元素初始的top值
-        	break;
-        	case "touchmove":
-        	//阻止网页默认动作（即网页滚动）
-        	event.preventDefault();
-        	var touch = event.changedTouches[0],
-        	moveY = touch.pageY;
-        	var y = moveY - startY,//手指移动的距离
-	        t = parseInt(top) + y;//元素初始top值加上手指移动距离
-	        callback(t);
-        	break;
-        	case "touchend":
-        	callback1();
-        	break;
-        };
-	}
-	objNav.addEventListener("touchstart", moveNav, false);
-	objNav.addEventListener("touchmove", moveNav, false);
-	objNav.addEventListener("touchend", moveNav, false);
-}
-
 // 点击选择框
 var defaults = {
 	// type默认为0 单选，type: 1为选择省市区
